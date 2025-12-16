@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5: Finding Programs & Links | Complete Training Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/module-styles.css">
+    <style>
+        .video-container iframe { width: 100%; aspect-ratio: 16/9; border-radius: 12px; border: 1px solid var(--border-color); }
+        .video-config { aspect-ratio: 16/9; background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-primary) 100%); border-radius: 12px; border: 2px dashed var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .config-message { text-align: center; padding: 2rem; }
+        .config-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
+        .config-message h4 { color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .config-message p { color: var(--text-muted); font-size: 0.875rem; }
+        .config-message code { background: var(--bg-secondary); padding: 0.125rem 0.5rem; border-radius: 4px; }
+        .config-example { font-family: monospace; font-size: 0.75rem !important; background: var(--bg-secondary); padding: 0.75rem; border-radius: 8px; margin-top: 1rem !important; }
+    </style>
+</head>
+<body>
+    <nav class="module-nav">
+        <a href="../index.html" class="nav-back">
+            <span class="nav-arrow">&#8592;</span>
+            Back to Course
+        </a>
+        <div class="nav-progress">
+            <span class="nav-module-indicator">Module 5 of 11</span>
+            <div class="nav-progress-bar">
+                <div class="nav-progress-fill" id="moduleProgress" style="width: 0%"></div>
+            </div>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-btn" onclick="markComplete()" id="completeBtn">Mark Complete</button>
+        </div>
+    </nav>
+
+    <main class="module-container">
+        <header class="module-header">
+            <div class="module-badge phase-2">Phase 2: Building Your Platform</div>
+            <h1 class="module-title">Finding Programs & Links</h1>
+            <p class="module-subtitle">Joining Affiliate Networks and Getting Your Links</p>
+            <div class="module-meta">
+                <span class="meta-item">
+                    <span class="meta-icon">&#128337;</span>
+                    50 minutes
+                </span>
+                <span class="meta-item">
+                    <span class="meta-icon">&#128218;</span>
+                    Video + Network Guide
+                </span>
+                <span class="meta-item">
+                    <span class="meta-icon">&#127919;</span>
+                    Beginner
+                </span>
+            </div>
+        </header>
+
+        <!-- Learning Objectives -->
+        <section class="content-section">
+            <h2 class="section-title">Learning Objectives</h2>
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-number">1</div>
+                    <p>Understand the difference between affiliate networks and direct programs</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-number">2</div>
+                    <p>Navigate major affiliate networks to find programs in your niche</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-number">3</div>
+                    <p>Evaluate program terms (commissions, cookie duration, payment thresholds)</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-number">4</div>
+                    <p>Successfully apply to and get accepted into affiliate programs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Lesson Section -->
+        <section class="content-section">
+            <h2 class="section-title">
+                <span class="title-icon">&#127909;</span>
+                Video Lesson: Joining Networks
+            </h2>
+            <div class="video-container">
+                <div class="video-config" data-video-id="" data-video-type="youtube">
+                    <div class="config-message">
+                        <div class="config-icon">&#127909;</div>
+                        <h4>Video Not Configured</h4>
+                        <p>To add a video, edit this module's HTML and set the <code>data-video-id</code> attribute.</p>
+                        <p class="config-example">YouTube: data-video-id="VIDEO_ID"<br>Vimeo: data-video-id="VIDEO_ID" data-video-type="vimeo"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-notes">
+                <h3>Key Takeaways from Video:</h3>
+                <ul>
+                    <li>Don't limit yourself to Amazon - many programs pay significantly higher commissions</li>
+                    <li>Check the footer of any product website for "Affiliates" or "Partners" links</li>
+                    <li>Newer, smaller sites can still get approved - focus on quality over traffic numbers</li>
+                    <li>Read program terms carefully - cookie duration and attribution matter greatly</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Text Guide Section -->
+        <section class="content-section">
+            <h2 class="section-title">
+                <span class="title-icon">&#128214;</span>
+                Affiliate Networks Guide
+            </h2>
+            
+            <div class="content-block">
+                <h3>Networks vs. Direct Programs</h3>
+                <p>There are two main ways to get affiliate links: through networks or directly from merchants.</p>
+                
+                <div class="comparison-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Affiliate Networks</th>
+                                <th>Direct Programs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>One platform, many merchants</td>
+                                <td>Apply directly to each brand</td>
+                            </tr>
+                            <tr>
+                                <td>Centralized dashboard and payments</td>
+                                <td>Separate logins for each program</td>
+                            </tr>
+                            <tr>
+                                <td>Standardized tracking and reporting</td>
+                                <td>Varying tracking systems</td>
+                            </tr>
+                            <tr>
+                                <td>May have lower commission rates</td>
+                                <td>Often higher commissions (no middleman)</td>
+                            </tr>
+                            <tr>
+                                <td>Examples: ShareASale, CJ, Impact</td>
+                                <td>Examples: Amazon Associates, Shopify Affiliates</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pro-tip">
+                    <h4>Best Practice</h4>
+                    <p>Use a mix of both. Networks are great for discovering programs and consolidated reporting. Direct programs often offer better terms and closer merchant relationships. Start with networks to learn the ropes, then add direct programs for your top-performing products.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Major Affiliate Networks</h3>
+                
+                <div class="network-cards">
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>Amazon Associates</h4>
+                            <span class="network-type">Direct Program</span>
+                        </div>
+                        <div class="network-body">
+                            <p>The largest and most beginner-friendly program. Millions of products across every category.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">1-10%</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">24 hours</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$10 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Huge product selection</li>
+                                <li>High consumer trust</li>
+                                <li>Easy approval for new sites</li>
+                                <li>Earn on entire cart, not just linked item</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Low commission rates (especially electronics)</li>
+                                <li>Very short 24-hour cookie</li>
+                                <li>Strict rules (no email links, prices must note "at time of posting")</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>ShareASale</h4>
+                            <span class="network-type">Network</span>
+                        </div>
+                        <div class="network-body">
+                            <p>One of the largest affiliate networks with 4,500+ merchants across all niches.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">Varies (5-50%)</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">30-90 days typical</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$50 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Huge merchant variety</li>
+                                <li>Reliable tracking and payments</li>
+                                <li>Good for physical products & fashion</li>
+                                <li>Real-time reporting</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Dated interface</li>
+                                <li>Individual merchant approval required</li>
+                                <li>Some quality variation in merchants</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>Impact</h4>
+                            <span class="network-type">Network</span>
+                        </div>
+                        <div class="network-body">
+                            <p>Modern platform with premium brands. Strong for SaaS and B2B partnerships.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">Varies (10-50%+)</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">30-90 days typical</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$25-50 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Premium brand partnerships</li>
+                                <li>Modern, user-friendly interface</li>
+                                <li>Great for SaaS and tech</li>
+                                <li>Advanced tracking and attribution</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Can be harder to get approved</li>
+                                <li>Some brands are selective</li>
+                                <li>Learning curve for features</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>PartnerStack</h4>
+                            <span class="network-type">Network</span>
+                        </div>
+                        <div class="network-body">
+                            <p>Specializes in B2B and SaaS partnerships. Excellent for software affiliates.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">15-50% recurring</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">30-90 days</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$25 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Many recurring commission programs</li>
+                                <li>High-quality SaaS partners</li>
+                                <li>Clean, modern interface</li>
+                                <li>Good support</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Focused on B2B (fewer consumer products)</li>
+                                <li>May require business audience</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>CJ Affiliate (Commission Junction)</h4>
+                            <span class="network-type">Network</span>
+                        </div>
+                        <div class="network-body">
+                            <p>One of the oldest and largest networks. Many big-name retailers and brands.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">Varies widely</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">Varies by merchant</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$50 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Big-name brand partnerships</li>
+                                <li>Long track record</li>
+                                <li>Detailed reporting</li>
+                                <li>Reliable payments</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Interface can be overwhelming</li>
+                                <li>Stricter approval for new affiliates</li>
+                                <li>Some programs have low rates</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="network-card">
+                        <div class="network-header">
+                            <h4>ClickBank</h4>
+                            <span class="network-type">Network</span>
+                        </div>
+                        <div class="network-body">
+                            <p>Focuses on digital products: courses, ebooks, software. High commissions but quality varies.</p>
+                            <div class="network-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Commission</span>
+                                    <span class="stat-value">50-75%</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Cookie</span>
+                                    <span class="stat-value">60 days typical</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Payout</span>
+                                    <span class="stat-value">$10 min</span>
+                                </div>
+                            </div>
+                            <ul class="network-pros">
+                                <li>Very high commission rates</li>
+                                <li>Easy approval</li>
+                                <li>Weekly payment options</li>
+                                <li>No application needed for most products</li>
+                            </ul>
+                            <ul class="network-cons">
+                                <li>Product quality varies significantly</li>
+                                <li>Some "hyped" products with high refunds</li>
+                                <li>Requires careful product vetting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Reading Affiliate Agreement Terms</h3>
+                <p>Before joining any program, understand these key terms:</p>
+                
+                <div class="terms-grid">
+                    <div class="term-card">
+                        <h4>Commission Rate</h4>
+                        <p>What percentage or flat fee you earn per sale. Compare programs in your niche - rates vary wildly from 1% to 75%.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Cookie Duration</h4>
+                        <p>How long after a click you'll get credit for a sale. Longer is better: 24 hours (Amazon) vs 90 days (some SaaS) makes a huge difference.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Payment Threshold</h4>
+                        <p>Minimum earnings before you can withdraw. Typical: $25-100. Lower thresholds mean faster access to your money.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Payment Frequency</h4>
+                        <p>How often you get paid. Monthly is standard, some offer weekly. Also check payment delay (e.g., "Net 30" = paid 30 days after month end).</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Attribution Model</h4>
+                        <p>"Last click" gives credit to the final affiliate link clicked. Some programs use "first click" or multi-touch attribution.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Prohibited Methods</h4>
+                        <p>What you can't do: bidding on brand keywords, email marketing, incentivized clicks, etc. Violations = account termination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>How to Find Programs in Your Niche</h3>
+                
+                <div class="find-methods">
+                    <div class="method-card">
+                        <div class="method-number">1</div>
+                        <div class="method-content">
+                            <h4>Check Product Websites</h4>
+                            <p>Scroll to the footer of any product website. Look for links labeled "Affiliates," "Partners," "Refer a Friend," or "Earn with Us." This is often the highest-paying option.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-number">2</div>
+                        <div class="method-content">
+                            <h4>Google Search</h4>
+                            <p>Search: "[Product Name] affiliate program" or "[Brand] partner program". Also try "[Niche] affiliate programs" for lists.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-number">3</div>
+                        <div class="method-content">
+                            <h4>Browse Network Directories</h4>
+                            <p>Sign up for ShareASale, Impact, and CJ. Browse their merchant directories by category. Filter by your niche to discover programs you didn't know existed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-number">4</div>
+                        <div class="method-content">
+                            <h4>Study Competitors</h4>
+                            <p>Check what programs successful sites in your niche promote. Use browser extensions like "Similar Web" or just look at their disclosure pages.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-number">5</div>
+                        <div class="method-content">
+                            <h4>Ask Directly</h4>
+                            <p>If a product doesn't list an affiliate program, email them! Many brands have programs they don't advertise, or will create custom arrangements for the right partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Getting Approved: Application Tips</h3>
+                
+                <div class="highlight-box">
+                    <h4>What Programs Look For</h4>
+                    <p>Most programs want to see:<br><br>
+                    <strong>1. Relevant Content:</strong> Your site/channel should be related to their product category<br>
+                    <strong>2. Quality:</strong> Professional appearance, original content, no spam<br>
+                    <strong>3. Traffic:</strong> Some programs require minimum traffic; others don't<br>
+                    <strong>4. Compliance:</strong> Evidence you understand FTC disclosure requirements</p>
+                </div>
+                
+                <div class="tips-list">
+                    <h4>Application Best Practices</h4>
+                    <ul class="checklist">
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Have content published first:</strong> Don't apply with an empty site. Have at least 5-10 quality posts or videos in your niche before applying to serious programs.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Complete your profile:</strong> Fill out all fields. Include your website URL, traffic estimates (even if low), and content strategy.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Explain your promotional plans:</strong> Be specific: "I'll create product reviews, comparison guides, and tutorial content" is better than "I'll promote on social media."
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Mention your audience:</strong> Describe who visits your site and why this product would help them. Show you understand their customer.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Use a professional email:</strong> yourname@yourdomain.com looks better than randomnumbers@gmail.com.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check-icon">&#10003;</span>
+                            <div>
+                                <strong>Don't be discouraged by rejections:</strong> Some programs reject initially but approve later. Apply again after building more content, or try similar programs.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Managing Your Affiliate Links</h3>
+                <p>Once approved, you'll need to manage potentially hundreds of links. Here's how:</p>
+                
+                <div class="tools-comparison">
+                    <div class="tool-option">
+                        <h4>Link Management Plugins (WordPress)</h4>
+                        <ul>
+                            <li><strong>ThirstyAffiliates:</strong> Cloaks links (yourdomain.com/recommends/product), tracks clicks, auto-links keywords</li>
+                            <li><strong>Pretty Links:</strong> Similar functionality, clean interface</li>
+                            <li><strong>Lasso:</strong> Premium option with product displays and automated link checking</li>
+                        </ul>
+                    </div>
+                    <div class="tool-option">
+                        <h4>Why Use Link Management?</h4>
+                        <ul>
+                            <li><strong>Clean URLs:</strong> Replace ugly affiliate URLs with branded links</li>
+                            <li><strong>Easy Updates:</strong> Change links in one place, updates everywhere</li>
+                            <li><strong>Click Tracking:</strong> See which links perform best</li>
+                            <li><strong>Broken Link Alerts:</strong> Know when programs end or links break</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignment Section -->
+        <section class="content-section">
+            <h2 class="section-title">
+                <span class="title-icon">&#128221;</span>
+                Practical Assignment
+            </h2>
+            <div class="assignment-box">
+                <h3>Module 5 Assignment: Join Your First Programs</h3>
+                <p>Complete these tasks to start building your affiliate program portfolio:</p>
+                
+                <div class="assignment-tasks">
+                    <div class="task-item">
+                        <input type="checkbox" id="task1" class="task-checkbox">
+                        <label for="task1">
+                            <strong>Task 1:</strong> Apply to Amazon Associates (even with a new site, you'll have 180 days to make qualifying sales)
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task2" class="task-checkbox">
+                        <label for="task2">
+                            <strong>Task 2:</strong> Create an account on ShareASale or Impact and browse merchants in your niche
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task3" class="task-checkbox">
+                        <label for="task3">
+                            <strong>Task 3:</strong> Apply to at least 2 affiliate programs relevant to your chosen niche (can be on networks or direct)
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task4" class="task-checkbox">
+                        <label for="task4">
+                            <strong>Task 4:</strong> For each program you're accepted to, document the commission rate, cookie duration, and key terms
+                        </label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task5" class="task-checkbox">
+                        <label for="task5">
+                            <strong>Task 5:</strong> Install a link management plugin (ThirstyAffiliates or Pretty Links) if using WordPress
+                        </label>
+                    </div>
+                </div>
+
+                <div class="assignment-notes">
+                    <h4>Your Affiliate Programs Tracker</h4>
+                    <textarea id="assignmentNotes" placeholder="Track your affiliate programs here:
+
+PROGRAM 1:
+Name:
+Network/Direct:
+Commission Rate:
+Cookie Duration:
+Payment Threshold:
+Application Status:
+Key Terms/Restrictions:
+
+PROGRAM 2:
+Name:
+Network/Direct:
+Commission Rate:
+Cookie Duration:
+Payment Threshold:
+Application Status:
+Key Terms/Restrictions:
+
+PROGRAM 3:
+Name:
+Network/Direct:
+Commission Rate:
+Cookie Duration:
+Payment Threshold:
+Application Status:
+Key Terms/Restrictions:
+
+LINK MANAGEMENT:
+Plugin/Tool Used:
+Setup Complete: Yes/No"></textarea>
+                    <button class="save-btn" onclick="saveNotes()">Save Notes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module Navigation -->
+        <section class="module-footer-nav">
+            <div class="nav-previous" onclick="window.location.href='module-4.html'">
+                <span class="nav-label">Previous Module</span>
+                <span class="nav-title">&#8592; Choosing a Platform</span>
+            </div>
+            <div class="nav-next" onclick="window.location.href='module-6.html'">
+                <span class="nav-label">Next Module</span>
+                <span class="nav-title">Content Creation Strategy &#8594;</span>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .network-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .network-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .network-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .network-header h4 {
+            font-size: 1.125rem;
+        }
+
+        .network-type {
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .network-body {
+            padding: 1.5rem;
+        }
+
+        .network-body > p {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .network-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: var(--accent-primary);
+            font-size: 0.875rem;
+        }
+
+        .network-pros, .network-cons {
+            list-style: none;
+            margin-bottom: 0.75rem;
+        }
+
+        .network-pros li, .network-cons li {
+            padding: 0.375rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+        }
+
+        .network-pros li::before { content: '+'; position: absolute; left: 0; color: var(--success); font-weight: bold; }
+        .network-cons li::before { content: '-'; position: absolute; left: 0; color: var(--danger); font-weight: bold; }
+
+        .find-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .method-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .method-number {
+            width: 36px;
+            height: 36px;
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .method-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .method-content p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin: 0;
+        }
+
+        .tips-list {
+            margin-top: 1.5rem;
+        }
+
+        .tips-list h4 {
+            margin-bottom: 1rem;
+        }
+
+        .tools-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .tool-option {
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tool-option h4 {
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .tool-option ul {
+            list-style: none;
+        }
+
+        .tool-option li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tool-option li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .network-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function initVideo() {
+            const vc = document.querySelector('.video-config');
+            if (vc && vc.dataset.videoId && vc.dataset.videoId.trim() !== '') {
+                const url = vc.dataset.videoType === 'vimeo' ? `https://player.vimeo.com/video/${vc.dataset.videoId}` : `https://www.youtube.com/embed/${vc.dataset.videoId}`;
+                const iframe = document.createElement('iframe');
+                iframe.src = url; iframe.setAttribute('allowfullscreen', '');
+                vc.parentElement.innerHTML = ''; vc.parentElement.appendChild(iframe);
+            }
+        }
+        function saveNotes() {
+            const notes = document.getElementById('assignmentNotes').value;
+            localStorage.setItem('module5Notes', notes);
+            alert('Notes saved successfully!');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initVideo();
+            const savedNotes = localStorage.getItem('module5Notes');
+            if (savedNotes) {
+                document.getElementById('assignmentNotes').value = savedNotes;
+            }
+            
+            for (let i = 1; i <= 5; i++) {
+                const saved = localStorage.getItem(`module5Task${i}`);
+                if (saved === 'true') {
+                    document.getElementById(`task${i}`).checked = true;
+                }
+            }
+            
+            updateModuleProgress();
+        });
+
+        document.querySelectorAll('.task-checkbox').forEach(cb => {
+            cb.addEventListener('change', function() {
+                localStorage.setItem(`module5Task${this.id.replace('task', '')}`, this.checked);
+                updateModuleProgress();
+            });
+        });
+
+        function updateModuleProgress() {
+            const tasksComplete = [1,2,3,4,5].filter(i => localStorage.getItem(`module5Task${i}`) === 'true').length;
+            const progress = (tasksComplete / 5) * 100;
+            document.getElementById('moduleProgress').style.width = `${progress}%`;
+            
+            if (progress === 100) {
+                updateCourseProgress(5, 'completed');
+                document.getElementById('completeBtn').textContent = 'Completed!';
+                document.getElementById('completeBtn').disabled = true;
+            }
+        }
+
+        function markComplete() {
+            updateCourseProgress(5, 'completed');
+            document.getElementById('completeBtn').textContent = 'Completed!';
+            document.getElementById('completeBtn').disabled = true;
+        }
+
+        function updateCourseProgress(moduleId, status) {
+            const saved = localStorage.getItem('affiliateCourseProgress');
+            const progress = saved ? JSON.parse(saved) : {};
+            progress[moduleId] = status;
+            localStorage.setItem('affiliateCourseProgress', JSON.stringify(progress));
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Marketing Mastery | Complete Training Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9090a0;
+            --text-muted: #606070;
+            --accent-primary: #00d4aa;
+            --accent-secondary: #00a88a;
+            --accent-glow: rgba(0, 212, 170, 0.15);
+            --border-color: #2a2a3a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --phase-1: #00d4aa;
+            --phase-2: #6366f1;
+            --phase-3: #f59e0b;
+            --phase-4: #ec4899;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, transparent 0%, rgba(0, 212, 170, 0.02) 100%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, transparent 100%);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--bg-primary);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .progress-overview {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .progress-stat {
+            text-align: center;
+        }
+
+        .progress-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .progress-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .progress-bar-container {
+            width: 200px;
+        }
+
+        .progress-bar-bg {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary) 0%, var(--phase-2) 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent-primary) 50%, transparent 100%);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--text-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .hero-stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Phase Sections */
+        .phase-section {
+            margin-bottom: 3rem;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .phase-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .phase-1 .phase-badge { background: rgba(0, 212, 170, 0.15); color: var(--phase-1); }
+        .phase-2 .phase-badge { background: rgba(99, 102, 241, 0.15); color: var(--phase-2); }
+        .phase-3 .phase-badge { background: rgba(245, 158, 11, 0.15); color: var(--phase-3); }
+        .phase-4 .phase-badge { background: rgba(236, 72, 153, 0.15); color: var(--phase-4); }
+
+        .phase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+
+        .phase-progress {
+            margin-left: auto;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Module Cards */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .module-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px var(--accent-glow);
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary) 0%, var(--phase-2) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .module-card:hover::before {
+            opacity: 1;
+        }
+
+        .phase-1 .module-card::before { background: var(--phase-1); }
+        .phase-2 .module-card::before { background: var(--phase-2); }
+        .phase-3 .module-card::before { background: var(--phase-3); }
+        .phase-4 .module-card::before { background: var(--phase-4); }
+
+        .module-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-number {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .module-card.completed .module-number {
+            background: var(--success);
+            color: var(--bg-primary);
+        }
+
+        .module-card.in-progress .module-number {
+            background: var(--warning);
+            color: var(--bg-primary);
+        }
+
+        .module-info {
+            flex: 1;
+        }
+
+        .module-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .module-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .module-description {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .module-components {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .component-tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .module-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .module-duration {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .module-status {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+        }
+
+        .status-not-started {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .status-in-progress {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--warning);
+        }
+
+        .status-completed {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+        }
+
+        /* Resources Section */
+        .resources-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .resources-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .resource-card {
+            padding: 1.25rem;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .resource-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .resource-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .resource-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .module-card {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .module-card:nth-child(1) { animation-delay: 0.1s; }
+        .module-card:nth-child(2) { animation-delay: 0.2s; }
+        .module-card:nth-child(3) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">AM</div>
+                <span class="logo-text">Affiliate Marketing Mastery</span>
+            </div>
+            <div class="progress-overview">
+                <div class="progress-stat">
+                    <div class="progress-stat-value" id="completedModules">0</div>
+                    <div class="progress-stat-label">Completed</div>
+                </div>
+                <div class="progress-stat">
+                    <div class="progress-stat-value">11</div>
+                    <div class="progress-stat-label">Total Modules</div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="overallProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>Master Affiliate Marketing</h1>
+            <p>A comprehensive, beginner-friendly course designed to take you from zero to generating passive income through affiliate marketing. Complete with interactive lessons, practical assignments, and AI-powered strategies for 2025.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">11</div>
+                    <div class="hero-stat-label">In-Depth Modules</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4</div>
+                    <div class="hero-stat-label">Learning Phases</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">30+</div>
+                    <div class="hero-stat-label">Practical Exercises</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">15+</div>
+                    <div class="hero-stat-label">Templates Included</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 1: Foundations -->
+        <section class="phase-section phase-1">
+            <div class="phase-header">
+                <span class="phase-badge">Phase 1</span>
+                <h2 class="phase-title">Foundations</h2>
+                <span class="phase-progress"><span id="phase1Progress">0</span>/3 Complete</span>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card" onclick="openModule(1)" data-module="1">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Affiliate Marketing 101</h3>
+                            <p class="module-subtitle">Understanding the Fundamentals</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Learn what affiliate marketing is, understand the key players (merchants, affiliates, consumers, networks), and explore different commission structures.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Glossary</span>
+                        <span class="component-tag">Quiz</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">45 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(2)" data-module="2">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Niche & Product Selection</h3>
+                            <p class="module-subtitle">Finding Your Profitable Angle</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Discover how to identify profitable niches, balance passion with profit potential, and research products that convert in 2025's market.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Niche Checklist</span>
+                        <span class="component-tag">Action Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">60 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(3)" data-module="3">
+                    <div class="module-header">
+                        <div class="module-number">3</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Legal & Ethical Basics</h3>
+                            <p class="module-subtitle">Stay Safe, Stay Compliant</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Understand FTC disclosure requirements, learn ethical marketing practices, and get templates for compliant affiliate promotions.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Disclosure Templates</span>
+                        <span class="component-tag">Scenario Quiz</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">40 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2: Building Your Platform -->
+        <section class="phase-section phase-2">
+            <div class="phase-header">
+                <span class="phase-badge">Phase 2</span>
+                <h2 class="phase-title">Building Your Platform</h2>
+                <span class="phase-progress"><span id="phase2Progress">0</span>/3 Complete</span>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card" onclick="openModule(4)" data-module="4">
+                    <div class="module-header">
+                        <div class="module-number">4</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Choosing a Platform</h3>
+                            <p class="module-subtitle">Where to Build Your Presence</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Explore platform options (blog, YouTube, social media, email) and get a complete guide to setting up your first WordPress affiliate site.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Demo</span>
+                        <span class="component-tag">Setup Guide</span>
+                        <span class="component-tag">Action Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">75 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(5)" data-module="5">
+                    <div class="module-header">
+                        <div class="module-number">5</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Finding Programs & Links</h3>
+                            <p class="module-subtitle">Joining Affiliate Networks</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Learn to find and join top affiliate networks (Amazon Associates, ShareASale, ClickBank, Impact) and understand program terms.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Network Guide</span>
+                        <span class="component-tag">Action Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">50 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(6)" data-module="6">
+                    <div class="module-header">
+                        <div class="module-number">6</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Content Creation Strategy</h3>
+                            <p class="module-subtitle">Creating Content That Converts</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Master high-converting content types: product reviews, tutorials, comparisons, and "best of" lists with proven templates.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Content Templates</span>
+                        <span class="component-tag">Writing Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">65 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 3: Traffic & Conversion -->
+        <section class="phase-section phase-3">
+            <div class="phase-header">
+                <span class="phase-badge">Phase 3</span>
+                <h2 class="phase-title">Traffic & Conversion</h2>
+                <span class="phase-progress"><span id="phase3Progress">0</span>/3 Complete</span>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card" onclick="openModule(7)" data-module="7">
+                    <div class="module-header">
+                        <div class="module-number">7</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Basic SEO for Affiliates</h3>
+                            <p class="module-subtitle">Getting Found in Search</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Learn keyword research for buyer intent, on-page SEO fundamentals, and how to optimize your affiliate content for search engines.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">SEO Checklist</span>
+                        <span class="component-tag">Optimization Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">70 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(8)" data-module="8">
+                    <div class="module-header">
+                        <div class="module-number">8</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Traffic Generation</h3>
+                            <p class="module-subtitle">Driving Visitors to Your Content</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Strategies for social media promotion, content repurposing, YouTube traffic, and leveraging short-form video in 2025.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Platform Guides</span>
+                        <span class="component-tag">Social Media Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">60 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(9)" data-module="9">
+                    <div class="module-header">
+                        <div class="module-number">9</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Maximizing Conversions</h3>
+                            <p class="module-subtitle">Turn Clicks into Commissions</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Best practices for link placement, crafting compelling calls-to-action, building trust, and avoiding common conversion killers.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">CTA Examples</span>
+                        <span class="component-tag">Site Audit Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">55 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 4: Scaling & Tracking -->
+        <section class="phase-section phase-4">
+            <div class="phase-header">
+                <span class="phase-badge">Phase 4</span>
+                <h2 class="phase-title">Scaling & Tracking</h2>
+                <span class="phase-progress"><span id="phase4Progress">0</span>/2 Complete</span>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card" onclick="openModule(10)" data-module="10">
+                    <div class="module-header">
+                        <div class="module-number">10</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Tracking & Analytics</h3>
+                            <p class="module-subtitle">Know Your Results</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Set up Google Analytics, understand network dashboards, and learn to track clicks, conversions, and revenue effectively.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Analytics Guide</span>
+                        <span class="component-tag">Setup Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">50 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openModule(11)" data-module="11">
+                    <div class="module-header">
+                        <div class="module-number">11</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Email Marketing Essentials</h3>
+                            <p class="module-subtitle">Building Your Greatest Asset</p>
+                        </div>
+                    </div>
+                    <p class="module-description">Learn to build an email list, create effective lead magnets, and set up automated affiliate email sequences.</p>
+                    <div class="module-components">
+                        <span class="component-tag">Video Lesson</span>
+                        <span class="component-tag">Email Templates</span>
+                        <span class="component-tag">List Building Assignment</span>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-duration">65 min</span>
+                        <span class="module-status status-not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="resources-section">
+            <h2 class="resources-title">
+                <span>Course Resources</span>
+            </h2>
+            <div class="resources-grid">
+                <div class="resource-card" onclick="openResource('glossary')">
+                    <div class="resource-icon">&#128218;</div>
+                    <h3 class="resource-name">Affiliate Glossary</h3>
+                    <p class="resource-desc">Complete dictionary of affiliate marketing terms</p>
+                </div>
+                <div class="resource-card" onclick="openResource('templates')">
+                    <div class="resource-icon">&#128196;</div>
+                    <h3 class="resource-name">Templates Library</h3>
+                    <p class="resource-desc">All content templates and checklists</p>
+                </div>
+                <div class="resource-card" onclick="openResource('tools')">
+                    <div class="resource-icon">&#128295;</div>
+                    <h3 class="resource-name">AI Tools Guide</h3>
+                    <p class="resource-desc">2025 AI tools for affiliate marketers</p>
+                </div>
+                <div class="resource-card" onclick="openResource('networks')">
+                    <div class="resource-icon">&#127760;</div>
+                    <h3 class="resource-name">Network Directory</h3>
+                    <p class="resource-desc">Top affiliate networks and programs</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Affiliate Marketing Mastery Course | Internal Training Tool | Work Local</p>
+        <p style="margin-top: 0.5rem;">Last Updated: December 2025</p>
+    </footer>
+
+    <script>
+        // Course data and progress management
+        const courseState = {
+            modules: {},
+            init() {
+                const saved = localStorage.getItem('affiliateCourseProgress');
+                if (saved) {
+                    this.modules = JSON.parse(saved);
+                }
+                this.updateUI();
+            },
+            save() {
+                localStorage.setItem('affiliateCourseProgress', JSON.stringify(this.modules));
+            },
+            getModuleStatus(moduleId) {
+                return this.modules[moduleId] || 'not-started';
+            },
+            setModuleStatus(moduleId, status) {
+                this.modules[moduleId] = status;
+                this.save();
+                this.updateUI();
+            },
+            updateUI() {
+                // Update module cards
+                document.querySelectorAll('.module-card').forEach(card => {
+                    const moduleId = card.dataset.module;
+                    const status = this.getModuleStatus(moduleId);
+                    const statusEl = card.querySelector('.module-status');
+                    const numberEl = card.querySelector('.module-number');
+                    
+                    card.classList.remove('completed', 'in-progress');
+                    statusEl.classList.remove('status-not-started', 'status-in-progress', 'status-completed');
+                    
+                    if (status === 'completed') {
+                        card.classList.add('completed');
+                        statusEl.classList.add('status-completed');
+                        statusEl.textContent = 'Completed';
+                    } else if (status === 'in-progress') {
+                        card.classList.add('in-progress');
+                        statusEl.classList.add('status-in-progress');
+                        statusEl.textContent = 'In Progress';
+                    } else {
+                        statusEl.classList.add('status-not-started');
+                        statusEl.textContent = 'Not Started';
+                    }
+                });
+
+                // Calculate progress
+                const phase1Complete = [1, 2, 3].filter(m => this.getModuleStatus(m) === 'completed').length;
+                const phase2Complete = [4, 5, 6].filter(m => this.getModuleStatus(m) === 'completed').length;
+                const phase3Complete = [7, 8, 9].filter(m => this.getModuleStatus(m) === 'completed').length;
+                const phase4Complete = [10, 11].filter(m => this.getModuleStatus(m) === 'completed').length;
+                const totalComplete = phase1Complete + phase2Complete + phase3Complete + phase4Complete;
+
+                document.getElementById('phase1Progress').textContent = phase1Complete;
+                document.getElementById('phase2Progress').textContent = phase2Complete;
+                document.getElementById('phase3Progress').textContent = phase3Complete;
+                document.getElementById('phase4Progress').textContent = phase4Complete;
+                document.getElementById('completedModules').textContent = totalComplete;
+                document.getElementById('overallProgress').style.width = `${(totalComplete / 11) * 100}%`;
+            }
+        };
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            courseState.init();
+        });
+
+        // Navigation functions
+        function openModule(moduleId) {
+            window.location.href = `modules/module-${moduleId}.html`;
+        }
+
+        function openResource(resourceType) {
+            window.location.href = `resources/${resourceType}.html`;
+        }
+    </script>
+</body>
+</html>
+
