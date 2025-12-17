@@ -508,6 +508,68 @@
         .module-card:nth-child(1) { animation-delay: 0.1s; }
         .module-card:nth-child(2) { animation-delay: 0.2s; }
         .module-card:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Resume Section Styles */
+        .resume-section {
+            padding: 0 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .resume-card {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 159, 67, 0.1) 100%);
+            border: 2px solid #ff6b6b;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            animation: glow-pulse 3s infinite;
+        }
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.2); }
+            50% { box-shadow: 0 0 35px rgba(255, 107, 107, 0.4); }
+        }
+        .resume-icon {
+            font-size: 2.5rem;
+        }
+        .resume-content {
+            flex: 1;
+        }
+        .resume-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .resume-content p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        .resume-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff9f43 100%);
+            color: white;
+            border: none;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+        }
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+        @media (max-width: 600px) {
+            .resume-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .resume-btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -556,6 +618,20 @@
                     <div class="hero-stat-value">15+</div>
                     <div class="hero-stat-label">Templates Included</div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Continue Where You Left Off Section -->
+        <section class="resume-section" id="resumeSection" style="display: none;">
+            <div class="resume-card">
+                <div class="resume-icon">🎯</div>
+                <div class="resume-content">
+                    <h3>Welcome Back!</h3>
+                    <p id="resumeMessage">Continue where you left off</p>
+                </div>
+                <button class="resume-btn" id="resumeBtn" onclick="resumeProgress()">
+                    Continue Learning →
+                </button>
             </div>
         </section>
 
@@ -914,6 +990,87 @@
                 document.getElementById('phase4Progress').textContent = phase4Complete;
                 document.getElementById('completedModules').textContent = totalComplete;
                 document.getElementById('overallProgress').style.width = `${(totalComplete / 11) * 100}%`;
+
+                // Show resume section if there's any progress
+                this.updateResumeSection();
+            },
+
+            getNextModule() {
+                const moduleNames = {
+                    1: 'Affiliate Marketing 101',
+                    2: 'Niche & Product Selection',
+                    3: 'Legal & Ethical Basics',
+                    4: 'Platform Selection',
+                    5: 'Joining Programs & Networks',
+                    6: 'Content That Converts',
+                    7: 'SEO Fundamentals',
+                    8: 'Traffic Generation',
+                    9: 'Conversion Optimization',
+                    10: 'Tracking & Analytics',
+                    11: 'Email List Building'
+                };
+                
+                // Find first in-progress module
+                for (let i = 1; i <= 11; i++) {
+                    if (this.getModuleStatus(i) === 'in-progress') {
+                        return { id: i, name: moduleNames[i], status: 'in-progress' };
+                    }
+                }
+                
+                // Find first not-started module after any completed ones
+                let hasCompletedAny = false;
+                for (let i = 1; i <= 11; i++) {
+                    if (this.getModuleStatus(i) === 'completed') {
+                        hasCompletedAny = true;
+                    } else if (hasCompletedAny) {
+                        return { id: i, name: moduleNames[i], status: 'next' };
+                    }
+                }
+                
+                // If user has started (has any progress), suggest first incomplete module
+                if (hasCompletedAny) {
+                    return null; // All completed
+                }
+                
+                return null; // No progress yet
+            },
+
+            hasAnyProgress() {
+                for (let i = 1; i <= 11; i++) {
+                    const status = this.getModuleStatus(i);
+                    if (status === 'completed' || status === 'in-progress') {
+                        return true;
+                    }
+                }
+                return false;
+            },
+
+            updateResumeSection() {
+                const resumeSection = document.getElementById('resumeSection');
+                const resumeMessage = document.getElementById('resumeMessage');
+                
+                if (!this.hasAnyProgress()) {
+                    resumeSection.style.display = 'none';
+                    return;
+                }
+
+                const nextModule = this.getNextModule();
+                
+                if (nextModule) {
+                    resumeSection.style.display = 'block';
+                    if (nextModule.status === 'in-progress') {
+                        resumeMessage.textContent = `Continue Module ${nextModule.id}: ${nextModule.name}`;
+                    } else {
+                        resumeMessage.textContent = `Next up: Module ${nextModule.id} - ${nextModule.name}`;
+                    }
+                    window.nextModuleId = nextModule.id;
+                } else {
+                    // All modules completed
+                    resumeSection.style.display = 'block';
+                    resumeMessage.textContent = 'Congratulations! You\'ve completed all modules. Review any module below.';
+                    document.getElementById('resumeBtn').textContent = 'Review Module 1 →';
+                    window.nextModuleId = 1;
+                }
             }
         };
 
@@ -921,6 +1078,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             courseState.init();
         });
+
+        // Resume progress function
+        function resumeProgress() {
+            if (window.nextModuleId) {
+                openModule(window.nextModuleId);
+            }
+        }
 
         // Navigation functions
         function openModule(moduleId) {
